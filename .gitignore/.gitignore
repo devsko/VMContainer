@@ -6,7 +6,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-*.*[Ss]ecrets
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -22,7 +21,6 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-code/test/Templates.Test/TestRuns/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -44,7 +42,8 @@ dlldata.c
 
 # DNX
 project.lock.json
-
+project.fragment.lock.json
+artifacts/
 
 *_i.c
 *_p.c
@@ -144,7 +143,7 @@ publish/
 *.azurePubxml
 # TODO: Comment the next line if you want to checkin your web deploy settings
 # but database connection strings (with potential passwords) will be unencrypted
-*.pubxml
+#*.pubxml
 *.publishproj
 
 # Microsoft Azure Web App publish settings. Comment the next line if you want to
@@ -158,8 +157,6 @@ PublishScripts/
 **/packages/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
-#required
-!**/test/Packages/packages.nupkg
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/packages/repositories.config
 # NuGet v3's project.json files produces more ignoreable files
@@ -192,7 +189,8 @@ ClientBin/
 *~
 *.dbmdl
 *.dbproj.schemaview
-!TestCert.pfx
+*.jfm
+*.pfx
 *.publishsettings
 node_modules/
 orleans.codegen.cs
@@ -254,5 +252,10 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
-templates/_composition/_shared/Page.Chart.SampleDataService/Services/SampleDataService_postaction.cs
-/myModel.vsdx
+
+# CodeRush
+.cr/
+
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
